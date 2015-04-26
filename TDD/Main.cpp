@@ -5,6 +5,8 @@ Convention:
 - Methods are clear and easy to understand - comments are not necesarry
 - Methods are short
 */
+#define FRIEND_TEST(test_case_name, test_name)\
+	friend class test_case_name##_##test_name##_Test
 
 
 #include <string>
@@ -21,6 +23,20 @@ public:
 	int run();
 	LargestProduct();
 	~LargestProduct();
+	//Metod added only to test purpose
+	uint64_t publicMultiplyNumbers(int i, uint64_t product)
+	{
+		return multiplyNumbers(i,product);
+	}
+
+	uint64_t publicCheckGreatness(uint64_t largestProduct, uint64_t product)
+	{
+		return checkGreatness(largestProduct, product);
+	}
+	uint64_t publicFollowMainLoop()
+	{
+		return followMainLoop();
+	}
 
 private:
 	const string Number; 
@@ -29,6 +45,8 @@ private:
 	uint64_t multiplyNumbers(int i, uint64_t product);
 	uint64_t checkGreatness(uint64_t largestProduct, uint64_t product); 
 	uint64_t followMainLoop(); 
+
+	FRIEND_TEST(TEST_CLASS, print);
 };
 
 
@@ -36,6 +54,7 @@ private:
 int main()
 {
 	LargestProduct *product = new LargestProduct();
+	product->run();
 	delete product;
 }
 
