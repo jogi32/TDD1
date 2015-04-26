@@ -69,6 +69,7 @@ LargestProduct::~LargestProduct()
 
 int LargestProduct::run()
 {
+
 	return 1;
 }
 
@@ -85,4 +86,15 @@ uint64_t LargestProduct::multiplyNumbers(int i, uint64_t product)
 		product *= atol((Number.substr(j, 1)).c_str());
 	}
 	return product;
+}
+
+uint64_t LargestProduct::followMainLoop()
+{
+	for (int i = 0; i < Number.length() - sizeProduct + 1; i++)
+	{
+		uint64_t product = 1;
+		product = multiplyNumbers(i, product);
+		largestProduct = checkGreatness(largestProduct, product);
+	}
+	return largestProduct;
 }

@@ -31,7 +31,7 @@ namespace UnitTestTDD
 		TEST_METHOD(publicFollowMainLoop)
 		{
 			LargestProduct test;
-			Assert::AreEqual((uint64_t)9999, test.publicFollowMainLoop());
+			Assert::AreEqual((uint64_t)23514624000, test.publicFollowMainLoop());
 		}
 
 	};
