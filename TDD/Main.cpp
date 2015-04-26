@@ -79,3 +79,10 @@ uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t produc
 	return largestProduct;
 }
 
+uint64_t LargestProduct::multiplyNumbers(int i, uint64_t product)
+{
+	for (int j = i; j < i + sizeProduct; j++) {
+		product *= atol((Number.substr(j, 1)).c_str());
+	}
+	return product;
+}
