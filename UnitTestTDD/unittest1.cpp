@@ -22,5 +22,11 @@ namespace UnitTestTDD
 			Assert::AreEqual(999, (int)test.publicCheckGreatness(999,998));
 		}
 
+		TEST_METHOD(publicMultiplyNumbers)
+		{
+			LargestProduct test;
+			Assert::AreEqual(5000940, (int)test.publicMultiplyNumbers(0, 1));
+		}
+
 	};
 }
