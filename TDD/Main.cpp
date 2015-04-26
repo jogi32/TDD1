@@ -72,6 +72,22 @@ int LargestProduct::run()
 	return print();
 }
 
+/*
+# Private: Function is checking witch of two number is greater
+#
+# largestProduct - Actual or previous greatest number
+# product - product of 13 number, waiting to be check with largestProduct
+#
+# Examples
+#
+#   checkGreatness(999, 111)
+#   # => 999
+#
+#	checkGreatness(555, 777)
+#   # => 777
+#
+# Returns the actual largestProduct
+*/
 uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t product)
 {
 	if (product > largestProduct)
@@ -79,6 +95,23 @@ uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t produc
 	return largestProduct;
 }
 
+
+/*
+# Private: Function is multipling product of 13 number from string Number
+#
+# i - Actual position in checking Number string
+# product - product of 13 number
+#
+# Examples
+#
+#   multiplyNumbers(0, 1)
+#	# => value of product 13 numbers in Number string count from 0 position
+#
+#	multiplyNumbers(10, 1)
+#	# => value of product 13 numbers in Number string count from 10 position
+#
+# Returns the actual product of 13 number
+*/
 uint64_t LargestProduct::multiplyNumbers(int i, uint64_t product)
 {
 	for (int j = i; j < i + sizeProduct; j++) {
@@ -98,6 +131,17 @@ uint64_t LargestProduct::followMainLoop()
 	return largestProduct;
 }
 
+
+/*
+# Private: Function is printing data on screen
+#
+#
+# Examples
+#
+#   print()
+#	#=>321324654
+#
+*/
 int LargestProduct::print()
 {
 	cout << followMainLoop() << endl;
