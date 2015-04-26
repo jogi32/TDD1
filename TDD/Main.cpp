@@ -74,7 +74,8 @@ int LargestProduct::run()
 
 uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t product)
 {
-	
-	return 0;
+	if (product > largestProduct)
+		largestProduct = product;
+	return largestProduct;
 }
 
