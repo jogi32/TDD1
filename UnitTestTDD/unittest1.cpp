@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "..\TDD\main.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -9,9 +10,10 @@ namespace UnitTestTDD
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(run)
 		{
-			
+			LargestProduct test;
+			Assert::AreEqual(1, test.run());
 		}
 
 	};

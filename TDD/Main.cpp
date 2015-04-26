@@ -18,7 +18,7 @@ using std::string;
 class LargestProduct
 {
 public:
-	void run();
+	int run();
 	LargestProduct();
 	~LargestProduct();
 
@@ -47,3 +47,9 @@ LargestProduct::LargestProduct() : Number("7316717653133062491922511967442657474
 LargestProduct::~LargestProduct()
 {
 }
+
+int LargestProduct::run()
+{
+	return 1;
+}
+
