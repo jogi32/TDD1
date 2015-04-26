@@ -72,3 +72,9 @@ int LargestProduct::run()
 	return 1;
 }
 
+uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t product)
+{
+	
+	return 0;
+}
+

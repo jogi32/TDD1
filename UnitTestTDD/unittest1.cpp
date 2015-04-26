@@ -19,7 +19,7 @@ namespace UnitTestTDD
 		TEST_METHOD(publicCheckGreatness)
 		{
 			LargestProduct test;
-			Assert::AreEqual(999, test.publicCheckGreatness(999,998));
+			Assert::AreEqual(999, (int)test.publicCheckGreatness(999,998));
 		}
 
 	};
