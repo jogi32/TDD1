@@ -6,6 +6,9 @@ Convention:
 - Methods are short
 */
 
+//Project tested used basic Microsoft library from VisualStudio2013 -> CppUnitTestFramework
+//Library in file CppUnitTest.h
+//more info on official Microsoft page
 
 #include <string>
 #include <iostream>
@@ -40,7 +43,7 @@ public:
 private:
 	const string Number; 
 	uint64_t largestProduct;
-	void print();
+	int print();
 	uint64_t multiplyNumbers(int i, uint64_t product);
 	uint64_t checkGreatness(uint64_t largestProduct, uint64_t product); 
 	uint64_t followMainLoop(); 
@@ -66,8 +69,7 @@ LargestProduct::~LargestProduct()
 
 int LargestProduct::run()
 {
-	print();
-	return 1;
+	return print();
 }
 
 uint64_t LargestProduct::checkGreatness(uint64_t largestProduct, uint64_t product)
@@ -96,8 +98,9 @@ uint64_t LargestProduct::followMainLoop()
 	return largestProduct;
 }
 
-void LargestProduct::print()
+int LargestProduct::print()
 {
 	cout << followMainLoop() << endl;
 	cin.get();
+	return 1;
 }
