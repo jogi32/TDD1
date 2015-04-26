@@ -69,7 +69,7 @@ LargestProduct::~LargestProduct()
 
 int LargestProduct::run()
 {
-
+	print();
 	return 1;
 }
 
@@ -97,4 +97,10 @@ uint64_t LargestProduct::followMainLoop()
 		largestProduct = checkGreatness(largestProduct, product);
 	}
 	return largestProduct;
+}
+
+void LargestProduct::print()
+{
+	cout << followMainLoop() << endl;
+	cin.get();
 }
